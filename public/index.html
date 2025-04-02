@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Subscribe to Homefront, a five-minute briefing on building more homes. Get the latest wins, data, and real-world solutions in housing policy and development." />
+    <title>Mike Kingsella's Homefront</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>    
+  <body class="bg-white text-gray-900">
+    <div class="min-h-screen flex items-center justify-center px-6 py-12">
+      <div class="max-w-lg w-full text-center">
+        <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl mb-6">
+          Subscribe to <span class="text-blue-600">Homefront</span>
+        </h1>
+        <p class="text-lg text-gray-700 mb-8">
+          <strong>Homefront</strong> is a sharp, five-minute briefing on what’s working — and what’s not — in the fight to build more homes. Every two weeks, I spotlight wins, track momentum, break down the data, and share real-world solutions.
+          <br /><br />
+          Whether you’re making policy, building housing, or driving change, this is your edge.
+        </p>
+        <form method="POST" action="/submit" class="space-y-4">
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition"
+          >
+            Join the Homefront Newsletter
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>   
+</html>
