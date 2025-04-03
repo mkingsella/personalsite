@@ -53,25 +53,24 @@ app.post('/submit', async (req, res) => {
       from: 'Mike R. Kingsella <mike@kingsellafamily.com>',
       to: email,
       bcc: 'mike@kingsellafamily.com',
-      subject: 'Welcome to Homefront!',
+      subject: '🙌 Thanks for joining Homefront',
       html: `
       <p>👋 Hey there,</p>
 
       <p>
-        Thanks for signing up early. <strong>Homefront</strong> launches April 12, and you’re already on the list.
-        This newsletter is for people who care deeply about fixing the housing shortage — and want smart, fast updates
-        on what’s actually working. Every two weeks, I’ll send a focused briefing on new laws, fresh momentum, and the most practical ideas to expand housing supply in communities across the country — and to give advocates, builders, and policymakers a sharper edge.
+        Thanks for signing up early. <em>Homefront</em> launches April 12, and you’re already on the list. This newsletter is for people who care deeply about fixing the housing shortage — and want smart, fast updates on what’s actually working. Every two weeks, I’ll send a focused briefing on new laws, fresh momentum, and the most practical ideas to expand housing supply in communities across the country — and to give advocates, builders, and policymakers a sharper edge.
       </p>
 
       <p>
-        I’ve spent my career in the trenches of housing policy — as the Founder & CEO of Up for Growth, I work with
-        members of Congress, state legislators, and local leaders to unlock land use, lower costs, and get more homes built.
-        <strong>Homefront</strong> is where I connect the dots: from legislation to zoning reform, from data to what’s really
-        driving results on the ground.
+        I’ve spent my career in the trenches of housing policy — as the Founder & CEO of Up for Growth, I work with members of Congress, state legislators, and local leaders to unlock land use, lower costs, and get more homes built. <em>Homefront</em> is where I connect the dots: from legislation to zoning reform, from data to what’s really driving results on the ground.
       </p>
 
       <p>
-        The first issue hits April 12. You’ll be the first to see it. I’m glad you’re here — and I’m excited to share what’s ahead.
+        The first issue hits Saturday, April 12. You’ll be the first to see it. I’m glad you’re here — and I’m excited to share what’s ahead.
+      </p>
+
+      <p>
+        If you know someone who cares about solving the housing shortage, feel free to forward this email or send them to <a href="https://mike.kingsellafamily.com" target="_blank">mike.kingsellafamily.com</a> to sign up.
       </p>
 
       <p>
@@ -85,7 +84,7 @@ app.post('/submit', async (req, res) => {
 
       <p>
         <strong>P.S.</strong> If you’re not already following me on
-        <a href="https://www.linkedin.com/in/mike-kingsella/" target="_blank">LinkedIn</a>,
+        <a href="https://www.linkedin.com/in/mikekingsella/" target="_blank">LinkedIn</a>,
         <a href="https://bsky.app/profile/mkingsella.upforgrowth.org" target="_blank">Bluesky</a>, and
         <a href="https://x.com/mikekingsella" target="_blank">X</a>,
         I’d love for you to join the conversation there too. It’s all part of building this network and driving real change.
