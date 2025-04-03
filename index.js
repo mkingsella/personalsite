@@ -45,8 +45,10 @@ app.post('/submit', async (req, res) => {
   if (!email) return res.status(400).json({ error: 'Email is required' });
 
   try {
+    console.log('✅ Inserting into database...');
     await pool.query('INSERT INTO email_submissions (email) VALUES ($1)', [email]);
 
+    console.log('📧 Sending email via Mailgun...');
     await mg.messages.create(process.env.MAILGUN_DOMAIN, {
       from: 'Mike R. Kingsella <mike@kingsellafamily.com>',
       to: email,
@@ -55,14 +57,16 @@ app.post('/submit', async (req, res) => {
       html: `<p>Thanks for subscribing to <strong>Homefront</strong>!</p>`
     });
 
+    console.log('📣 Sending Slack/Bolt alert...');
     const timestamp = new Date().toLocaleString();
     await axios.post(process.env.SLACK_WEBHOOK_URL, {
       text: `🎉 *New Signup* | 📧 ${email} | ⏰ ${timestamp}`
     });
 
+    console.log('✅ All good, responding with success.');
     res.status(200).json({ message: 'Email submitted successfully!' });
   } catch (error) {
-    console.error(error);
+    console.error('❌ Submission error:', error);
     res.status(500).json({ error: 'Submission failed.' });
   }
 });
