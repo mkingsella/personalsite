@@ -3,59 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mike Kingsella – Housing Policy Advisor and Founder of Up for Growth" />
     <title>Mike Kingsella</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/future/style.css" />
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      h1, h2 {
-        font-family: 'Playfair Display', serif;
-      }
-    </style>
   </head>
-  <body class="text-gray-800">
 
-    <!-- Hero Section -->
-    <section class="relative h-[60vh] sm:h-[40vh] w-full bg-cover bg-center" style="background-image: url('/future/hero.jpg');">
-      <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-        <h1 class="text-white text-4xl sm:text-5xl font-bold text-center px-4">Mike Kingsella</h1>
-      </div>
-    </section>
+  <body class="font-sans text-gray-900">
+    <!-- Header -->
+    <header class="bg-[#F5EDE0] text-center py-8">
+      <h1 class="text-5xl font-serif font-bold">Mike Kingsella</h1>
+    </header>
 
-    <!-- Homefront Section -->
-    <section class="bg-[#F5EDE0] py-12 px-6 text-center">
-      <h2 class="text-3xl font-extrabold mb-4">Homefront</h2>
-      <p class="max-w-2xl mx-auto mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut metus in nunc commodo pulvinar. Integer nec sem vel nisi lacinia fermentum.
+    <!-- Hero -->
+    <div class="h-[500px] w-full overflow-hidden">
+      <img
+        src="https://mike.kingsellafamily.com/congressional-yimby.jpg"
+        alt="Mike speaking at the Capitol"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Homefront -->
+    <section class="bg-[#E4F0FF] py-16 px-6 text-center">
+      <h2 class="text-3xl font-serif font-bold mb-4">Homefront</h2>
+      <p class="max-w-2xl mx-auto text-lg mb-8">
+        <em>Homefront</em> is a sharp, five-minute briefing on what’s working — and what’s not — in the fight to build more homes.
+        We spotlight wins, track momentum, break down the data, and share real-world solutions.
       </p>
-      <form class="max-w-md mx-auto space-y-4">
-        <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
-        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">Join the Network</button>
+      <form method="POST" action="/submit" class="max-w-md mx-auto space-y-4">
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Enter your email"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
+        >
+          Join the Network
+        </button>
       </form>
     </section>
 
-    <!-- Speaking Section -->
-    <section class="bg-[#1E3A8A] text-white py-12 px-6 text-center">
-      <h2 class="text-3xl font-extrabold mb-4">Speaking</h2>
-      <p class="max-w-2xl mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae diam nec lacus dapibus laoreet vitae a magna. Sed quis magna nisi.
+    <!-- Speaking -->
+    <section class="bg-[#D8E3DC] py-16 px-6 text-center">
+      <h2 class="text-3xl font-serif font-bold mb-4">Speaking</h2>
+      <p class="max-w-2xl mx-auto text-lg">
+        Mike is a national voice on housing policy, zoning reform, and equitable growth. He’s spoken to Congress, nonprofits,
+        and developers across the country about solutions that work.
       </p>
     </section>
 
-    <!-- Contact Section -->
-    <section class="bg-[#3B82F6] text-white py-12 px-6 text-center">
-      <h2 class="text-3xl font-extrabold mb-4">Contact</h2>
-      <p class="max-w-xl mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque, libero nec pretium pulvinar, orci mi iaculis nunc, nec tempus nulla ipsum eget justo.
+    <!-- Contact -->
+    <section class="bg-[#FAF3DD] py-16 px-6 text-center">
+      <h2 class="text-3xl font-serif font-bold mb-4">Contact</h2>
+      <p class="max-w-2xl mx-auto text-lg">
+        Get in touch to discuss speaking opportunities, collaborations, or policy work.
+        Email <a href="mailto:mike@kingsellafamily.com" class="text-blue-600 underline">mike@kingsellafamily.com</a>
       </p>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#334155] text-white text-sm py-6 px-4 text-center">
-      <p>&copy; 2025 Mike Kingsella. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white text-center py-6 text-sm">
+      &copy; 2025 Mike Kingsella. All rights reserved.
     </footer>
-
   </body>
 </html>
