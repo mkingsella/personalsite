@@ -53,7 +53,7 @@ app.post('/submit', async (req, res) => {
       from: 'Mike R. Kingsella <mike@kingsellafamily.com>',
       to: email,
       bcc: 'mike@kingsellafamily.com',
-      subject: '🙌 Thanks for joining Homefront',
+      subject: 'Thanks for joining Homefront!',
       html: `
       <p>👋 Hey there,</p>
 
@@ -62,7 +62,7 @@ app.post('/submit', async (req, res) => {
       </p>
 
       <p>
-        I’ve spent my career in the trenches of housing policy — as the Founder & CEO of Up for Growth, I work with members of Congress, state legislators, and local leaders to unlock land use, lower costs, and get more homes built. <em>Homefront</em> is where I connect the dots: from legislation to zoning reform, from data to what’s really driving results on the ground.
+        I’ve spent my career in the trenches of housing policy — as the Founder & CEO of Up for Growth, I've had the opportunity to work with members of local leaders, state legislators, and members of Congress to unlock land use, lower costs, and get more homes built. <em>Homefront</em> is where I connect the dots: from legislation to zoning reform, from data to what’s really driving results on the ground.
       </p>
 
       <p>
@@ -70,7 +70,7 @@ app.post('/submit', async (req, res) => {
       </p>
 
       <p>
-        If you know someone who cares about solving the housing shortage, feel free to forward this email or send them to <a href="https://mike.kingsellafamily.com" target="_blank">mike.kingsellafamily.com</a> to sign up.
+        If you know someone who cares about solving the housing shortage, feel free to forward this email or send them to <a href="https://www.mikekingsella.com" target="_blank">www.mikekingsella.com</a> to sign up.
       </p>
 
       <p>
@@ -78,8 +78,8 @@ app.post('/submit', async (req, res) => {
         Housing Policy Advisor | Founder, Up for Growth<br />
         📍 403 Elm Street | Frederick, Maryland 21701<br />
         📞 202-957-1006 | ✉️ <a href="mailto:mike@kingsellafamily.com">mike@kingsellafamily.com</a><br />
-        🔗 <a href="https://mike.kingsellafamily.com" target="_blank">About Me</a> |
-        <a href="https://www.linkedin.com/in/mike-kingsella/" target="_blank">LinkedIn</a>
+        📰 <a href="https://www.mikekingsella.com" target="_blank"><em>Homefront</em></a> |
+        <a href="https://www.linkedin.com/in/mikekingsella/" target="_blank">LinkedIn</a>
       </p>
 
       <p>
