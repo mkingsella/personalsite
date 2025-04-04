@@ -75,7 +75,7 @@ app.post('/submit', async (req, res) => {
 
       <p>
         <strong>Mike R. Kingsella</strong><br />
-        Housing Policy Advisor | Founder, Up for Growth<br />
+        Housing Policy | Founder, Up for Growth<br />
         📍 403 Elm Street | Frederick, Maryland 21701<br />
         📞 202-957-1006 | ✉️ <a href="mailto:mike@kingsellafamily.com">mike@kingsellafamily.com</a><br />
         📰 <a href="https://www.mikekingsella.com" target="_blank"><em>Homefront</em></a> |
