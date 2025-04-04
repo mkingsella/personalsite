@@ -62,7 +62,7 @@ app.post('/submit', async (req, res) => {
       </p>
 
       <p>
-        I’ve spent my career in the trenches of housing policy — as the Founder & CEO of Up for Growth, I've had the opportunity to work with members of local leaders, state legislators, and members of Congress to unlock land use, lower costs, and get more homes built. <em>Homefront</em> is where I connect the dots: from legislation to zoning reform, from data to what’s really driving results on the ground.
+        I’ve spent my career in the trenches of housing policy — as the Founder & CEO of Up for Growth, I've had the opportunity to work with local leaders, state legislators, and members of Congress to unlock land use, lower costs, and get more homes built. <em>Homefront</em> is where I connect the dots: from legislation to zoning reform, from data to what’s really driving results on the ground.
       </p>
 
       <p>
