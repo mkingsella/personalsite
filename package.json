@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build:future": "tailwindcss -i ./src/future-input.css -o ./public/future/style.css --minify"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
