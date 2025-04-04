@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mike Kingsella</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-white text-gray-900 font-sans leading-relaxed">
+
+    <!-- Hero -->
+    <header class="w-full">
+      <picture>
+        <source srcset="/public/imgs/hero-mobile.jpg" media="(max-width: 768px)" />
+        <img src="/public/imgs/hero-desktop.jpg" alt="Mike Kingsella" class="w-full h-[90vh] object-cover" />
+      </picture>
+      <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white">
+        <div class="text-center px-4">
+          <h1 class="text-4xl md:text-6xl font-extrabold">Mike Kingsella</h1>
+          <p class="text-lg md:text-xl mt-2">Housing Policy Advisor | Founder, Up for Growth</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Homefront Section -->
+    <section class="px-6 py-16 bg-gray-50 text-center">
+      <h2 class="text-3xl font-bold mb-4">Homefront</h2>
+      <p class="text-lg max-w-xl mx-auto mb-6">
+        <em>Homefront</em> is a sharp, five-minute briefing on what’s working — and what’s not — in the fight to build more homes. We spotlight wins, track momentum, break down the data, and share real-world solutions.
+      </p>
+      <form class="max-w-md mx-auto" method="POST" action="/submit">
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+          class="w-full px-4 py-2 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
+        >
+          Join the Network
+        </button>
+      </form>
+    </section>
+
+    <!-- Speaking Section -->
+    <section class="px-6 py-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Speaking</h2>
+      <p class="text-lg max-w-xl mx-auto mb-6">
+        Mike is a national voice on housing policy, zoning reform, and equitable growth. He’s spoken to Congress, nonprofits, and developers across the country about solutions that work.
+      </p>
+      <a
+        href="#contact"
+        class="inline-block bg-black text-white py-2 px-6 rounded hover:bg-gray-800 transition"
+      >
+        Invite Mike to Speak
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6 text-sm">
+      <p>&copy; 2025 Mike Kingsella</p>
+      <div class="mt-2 space-x-4">
+        <a href="https://linkedin.com/in/mike-kingsella" target="_blank" class="hover:underline">LinkedIn</a>
+        <a href="mailto:mike@kingsellafamily.com" class="hover:underline">Email</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
