@@ -45,9 +45,21 @@ app.post('/submit', async (req, res) => {
   if (!email) return res.status(400).json({ error: 'Email is required' });
 
   try {
+    // Check if email already exists
+    const existingEmail = await pool.query(
+      'SELECT * FROM email_submissions WHERE email = $1',
+      [email]
+    );
+
+    if (existingEmail.rows.length > 0) {
+      return res.status(409).json({ error: 'This email is already subscribed.' });
+    }
+
+    // Insert email into database if not duplicate
     console.log('✅ Inserting into database...');
     await pool.query('INSERT INTO email_submissions (email) VALUES ($1)', [email]);
 
+    // Send confirmation email via Mailgun
     console.log('📧 Sending email via Mailgun...');
     await mg.messages.create(process.env.MAILGUN_DOMAIN, {
       from: 'Mike R. Kingsella <mike@kingsellafamily.com>',
@@ -66,7 +78,7 @@ app.post('/submit', async (req, res) => {
       </p>
 
       <p>
-        The first issue hits Saturday, April 12. You’ll be the first to see it. I’m glad you’re here — and I’m excited to share what’s ahead.
+        I'm excited to have you here. If you missed our first issue, don't worry—the next one will be in your inbox soon.
       </p>
 
       <p>
@@ -92,6 +104,7 @@ app.post('/submit', async (req, res) => {
     `
     });
 
+    // Slack notification
     console.log('📣 Sending Slack/Bolt alert...');
     const timestamp = new Date().toLocaleString();
     await axios.post(process.env.SLACK_WEBHOOK_URL, {
