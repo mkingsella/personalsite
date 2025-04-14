@@ -58,7 +58,7 @@ app.post('/submit', async (req, res) => {
       <p>👋 Hey there,</p>
 
       <p>
-        Thanks for signing up early. <em>Homefront</em> launches April 12, and you’re already on the list. This newsletter is for people who care deeply about fixing the housing shortage — and want smart, fast updates on what’s actually working. Every two weeks, I’ll send a focused briefing on new laws, fresh momentum, and the most practical ideas to expand housing supply in communities across the country — and to give advocates, builders, and policymakers a sharper edge.
+        Thanks for joining <em>Homefront</em>—the sharp, five-minute briefing for people who care deeply about fixing America’s housing shortage. Every two weeks, you'll get focused updates on new legislation, key policy wins, fresh momentum, and practical solutions helping advocates, builders, and policymakers build more homes.
       </p>
 
       <p>
@@ -70,7 +70,7 @@ app.post('/submit', async (req, res) => {
       </p>
 
       <p>
-        If you know someone who cares about solving the housing shortage, feel free to forward this email or send them to <a href="https://www.mikekingsella.com" target="_blank">www.mikekingsella.com</a> to sign up.
+        Know someone else who cares about solving the housing shortage? Forward this email or invite them to subscribe at <a href="https://www.mikekingsella.com" target="_blank">www.mikekingsella.com</a>.
       </p>
 
       <p>
