@@ -1,20 +1,10 @@
 {
   "name": "mksite",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "start": "node index.js",
-    "build:future": "tailwindcss -i ./src/future-input.css -o ./public/future/style.css --minify"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.1",
-    "vite": "^6.2.0"
+    "start": "node index.js"
   },
   "dependencies": {
     "axios": "^1.8.4",
