@@ -216,7 +216,7 @@ app.post('/generate-survey-links', async (req, res) => {
 
       generatedLinks.push({
         email,
-        surveyLink: `https://www.mikekingsella.com/survey?token=${token}`
+        surveyLink: `https://www.mikekingsella.com/survey.html?token=${token}`
       });
     }
 
