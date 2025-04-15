@@ -244,7 +244,7 @@ app.post('/send-survey-email', async (req, res) => {
     `, [email, token]);
 
     // Construct personalized survey link
-    const surveyLink = `https://yourdomain.com/survey?token=${token}`;
+    const surveyLink = `https://www.mikekingsella.com/survey?token=${token}`;
 
     // Send survey email using Mailgun
     await mg.messages.create(process.env.MAILGUN_DOMAIN, {
