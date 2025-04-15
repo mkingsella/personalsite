@@ -256,15 +256,45 @@ app.post('/send-survey-email', async (req, res) => {
     await mg.messages.create(process.env.MAILGUN_DOMAIN, {
       from: 'Mike R. Kingsella <mike@kingsellafamily.com>',
       to: email,
+      bcc: 'mike@kingsellafamily.com',
       subject: 'I’d love your feedback on Homefront!',
       html: `
-        <p>👋 Hi there,</p>
-        <p>Thanks for being part of the <em>Homefront</em> community! I'd really appreciate your feedback to help us improve your experience.</p>
-        <p><strong>Please take a moment to complete this brief survey:</strong></p>
-        <p><a href="${surveyLink}" target="_blank">👉 Click here to give feedback</a></p>
-        <p>Thanks again for your support!</p>
-        <p><strong>Mike R. Kingsella</strong><br />
-        Founder, Up for Growth | Publisher, <em>Homefront</em></p>
+        <p>👋 Hey there,</p>
+      
+        <p>
+          Thanks again for being part of <em>Homefront</em>—the sharp, five-minute briefing for people committed to solving America's housing shortage. Your experience matters a lot to me, and your feedback is essential to making <em>Homefront</em> even better.
+        </p>
+      
+        <p>
+          <strong>Would you take a moment to fill out this quick survey?</strong>
+        </p>
+      
+        <p>
+          <a href="${surveyLink}" target="_blank">📝 Click here to share your thoughts</a>
+        </p>
+      
+        <p>
+          Your insights help shape what we cover next—whether it's new legislation, critical policy updates, or practical solutions that move the needle.
+        </p>
+      
+        <p>Thanks so much for your support!</p>
+      
+        <p>
+          <strong>Mike R. Kingsella</strong><br />
+          Housing Policy | Founder, Up for Growth<br />
+          📍 403 Elm Street | Frederick, Maryland 21701<br />
+          📞 202-957-1006 | ✉️ <a href="mailto:mike@kingsellafamily.com">mike@kingsellafamily.com</a><br />
+          📰 <a href="https://www.mikekingsella.com" target="_blank"><em>Homefront</em></a> |
+          <a href="https://www.linkedin.com/in/mikekingsella/" target="_blank">LinkedIn</a>
+        </p>
+      
+        <p>
+          <strong>P.S.</strong> If you haven't connected yet on
+          <a href="https://www.linkedin.com/in/mikekingsella/" target="_blank">LinkedIn</a>,
+          <a href="https://bsky.app/profile/mkingsella.upforgrowth.org" target="_blank">Bluesky</a>, and
+          <a href="https://x.com/mikekingsella" target="_blank">X</a>,
+          I'd love to continue the conversation there too.
+        </p>
       `
     });
 
