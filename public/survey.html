@@ -64,16 +64,25 @@
 <div class="survey-container">
   <h2>Homefront Subscriber Survey</h2>
   <form method="POST" action="/submit-survey">
-
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Your full name" required>
-
+  
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+  
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+  
+    <label for="company">Company</label>
+    <input type="text" id="company" name="company" placeholder="Your company name">
+  
     <label for="occupation">Occupation</label>
     <input type="text" id="occupation" name="occupation" placeholder="Your occupation" required>
-
-    <label for="location">City and State</label>
-    <input type="text" id="location" name="location" placeholder="City, State" required>
-
+  
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" placeholder="City" required>
+  
+    <label for="state">State</label>
+    <input type="text" id="state" name="state" placeholder="State" required>
+  
     <label for="feedback">What do you like about Homefront?</label>
     <textarea id="feedback" name="feedback" rows="4" placeholder="Your feedback here..." required></textarea>
 
@@ -91,6 +100,33 @@
 
   </form>
 </div>
+
+<script>
+  document.getElementById('surveyForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+  
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+  
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+  
+    const response = await fetch(`/submit-survey?token=${encodeURIComponent(token)}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  
+    const result = await response.json();
+  
+    if (response.ok) {
+      alert(result.message);
+      event.target.reset();
+    } else {
+      alert(result.error);
+    }
+  });
+  </script>
 
 </body>
 </html>
