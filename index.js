@@ -222,7 +222,7 @@ app.post('/generate-survey-links', async (req, res) => {
 
       generatedLinks.push({
         email,
-        surveyLink: `https://www.mikekingsella.com/survey.html?token=${token}`
+        surveyLink: `https://www.mikekingsella.com/survey?token=${token}`
       });
     }
 
@@ -250,7 +250,7 @@ app.post('/send-survey-email', async (req, res) => {
     `, [email, token]);
 
     // Construct personalized survey link
-    const surveyLink = `https://www.mikekingsella.com/survey.html?token=${token}`;
+    const surveyLink = `https://www.mikekingsella.com/survey?token=${token}`;
 
     // Send survey email using Mailgun
     await mg.messages.create(process.env.MAILGUN_DOMAIN, {
